@@ -7,6 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.5.2" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.5.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.16" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.16">
       <PrivateAssets>all</PrivateAssets>
@@ -22,6 +25,13 @@
   <ItemGroup>
     <ProjectReference Include="..\EashCashIdentity.EntityLayer\EashCashIdentity.EntityLayer.csproj" />
     <ProjectReference Include="..\EasyCashIdentity.DataAccessLayer\EasyCashIdentity.DataAccessLayer.csproj" />
+    <ProjectReference Include="..\EasyCashIdentity.DtoLayer\EasyCashIdentity.DtoLayer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ValidationRules\AppRoleValidationRules\" />
+    <Folder Include="ValidationRules\CustomerAccountProcessValidationRules\" />
+    <Folder Include="ValidationRules\CustomerAccountValidationRules\" />
   </ItemGroup>
 
 </Project>
