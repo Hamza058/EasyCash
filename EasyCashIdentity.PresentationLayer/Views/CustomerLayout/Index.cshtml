@@ -1,5 +1,5 @@
 ﻿@{
-    Layout=null;
+    Layout = null;
 }
 
 <!DOCTYPE html>
@@ -17,14 +17,14 @@
                 <div class="">
                     <div class="page-title">
                         <div class="title_left">
-                            <h3>Fixed Sidebar <small> Just add class <strong>menu_fixed</strong></small></h3>
+                            @RenderBody()
                         </div>
                     </div>
                 </div>
             </div>
             <!-- /page content -->
             <!-- footer content -->_CustomerLayoutFooterPartial
-            @await Component.InvokeAsync("_CustomerLayoutFooterPartial")    
+            @await Component.InvokeAsync("_CustomerLayoutFooterPartial")
             <!-- /footer content -->
         </div>
     </div>

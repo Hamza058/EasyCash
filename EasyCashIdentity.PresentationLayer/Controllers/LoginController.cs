@@ -28,10 +28,10 @@ namespace EasyCashIdentity.PresentationLayer.Controllers
             var result = await _signInManager.PasswordSignInAsync(loginViewModel.Username, loginViewModel.Password, false, true);
             if (result.Succeeded)
             {
-                var user = await _userManager.FindByEmailAsync(loginViewModel.Username);
+                var user = await _userManager.FindByNameAsync(loginViewModel.Username);
                 if (user.EmailConfirmed)
                 {
-                    return RedirectToAction("Index", "MyProfile");
+                    return RedirectToAction("Index", "MyAccounts");
                 }
             }
             return View();
